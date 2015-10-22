@@ -6,6 +6,7 @@ Développer une application mobile cross-plateform pour un commerçant en matér
 
 L'application regroupera :
 
+
 1. Une page `Accueil` comprenant :
      - Presentation du commerce (contenu marketing).
      - Affichage des 3 derniers produits publiés.
