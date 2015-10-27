@@ -9,7 +9,7 @@
                 self.items = data;
             })
             .error(function(data) {
-                alert(data);
+                alert(data.toString());
             })
         };
     };
