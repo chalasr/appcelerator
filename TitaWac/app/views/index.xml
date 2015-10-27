@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container">
+		<Label id="label" onClick="doClick">Hello, Roubz</Label>
+		<WebView id="webview" url="src/templates/main.html"/>
+	</Window>
+</Alloy>

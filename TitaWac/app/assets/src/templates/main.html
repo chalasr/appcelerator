@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Root</title>
+  </head>
+  <body ng-controller="MainCtrl as main" ng-init="main.getData()" ng-init="main.redirectTo('/')" style="background-color: #eeeeee">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <h3>{{ main.name }}</h3>
+    <div class="container" ng-repeat="item in main.items | filter: query">
+        <p>{{ item.id }} | {{ item.name }}</p>
+    </div>
+
+    <input type="text" class="form-control" name="name" ng-model="query.name">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://cdn.chalasdev.fr/js/angular.min.js"></script>
+    <script type="text/javascript" src="http://cdn.chalasdev.fr/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </body>
+</html>
