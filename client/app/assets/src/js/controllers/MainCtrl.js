@@ -1,18 +1,27 @@
 (function(app){
-    function MainCtrl($http, $state) {
-        var self = this;
-        self.items = {};
-        this.name = 'L\'AtelierMac.com for iOs';
-        this.getData = function() {
-            $http.get('http://api.chalasdev.fr/products.json')
-            .success(function(data) {
-                self.items = data;
-            })
-            .error(function(data) {
-                alert(data.toString());
-            })
-        };
+
+    function MainCtrl($http, $state, $auth, $rootScope) {
+      var self = this;
+      self.items = {};
+
+      this.authCheck = function() {
+        if ($auth.isAuthenticated()) {
+            $http.get("http://localhost:8000/api/authenticate/user").success(function(response) {
+                $rootScope.authenticated = true;
+                $rootScope.currentUser = response.user;
+            }).error(function(data) {
+                alert('error');
+                alert("" + JSON.stringify(data));
+            });
+            if (!localStorage.getItem("user")) {
+                var user = JSON.stringify(response.user);
+                localStorage.setItem("user", user);
+            }
+        } else
+            $state.go("auth");
+      };
+
     };
 
     app.controller('MainCtrl', MainCtrl);
-})(angular.module('authApp'));
+})(angular.module('titanium'));

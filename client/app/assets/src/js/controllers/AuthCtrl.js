@@ -8,6 +8,24 @@
 		vm.loginError = false;
 		vm.loginErrorText;
 
+		this.authCheck = function() {
+			if($auth.isAuthenticated()) {
+				$state.go('home');
+				$http.get('http://localhost:8000/api/authenticate/user')
+				.success(function(response) {
+					$rootScope.authenticated = true;
+					$rootScope.currentUser = response.user;
+				})
+				.error(function(data) {
+						alert('' + JSON.stringify(data)+ '');
+				});
+				if(!localStorage.getItem('user')) {
+						var user = JSON.stringify(response.user);
+						localStorage.setItem('user', user);
+				}
+			}
+		};
+
 		vm.login = function() {
 			var credentials = {
 				email: vm.email,
@@ -25,9 +43,7 @@
 				localStorage.setItem('user', user);
 				$rootScope.authenticated = true;
 				$rootScope.currentUser = response.data.user;
-				$state.go('users');
-				alert($auth.isAuthenticated());
-				alert('' + localStorage.getItem('user').toString() + '')
+				$state.go('home');
 			});
 		};
 
@@ -52,10 +68,9 @@
 			if($state.current.name !== 'auth' && $auth.isAuthenticated() === false) {
 				$state.go('auth');
 				localStorage.removeItem('user');
-				alert('' + localStorage.getItem('user').toString() + '')
 			}
 		};
 
 	};
 
-})(angular.module('authApp'));
+})(angular.module('titanium'));

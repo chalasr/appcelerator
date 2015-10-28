@@ -1,17 +1,17 @@
 (function(app) {
     app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
 			$authProvider.loginUrl = 'http://localhost:8000/api/authenticate';
-			$urlRouterProvider.otherwise('/auth');
+			$urlRouterProvider.otherwise('/');
 			$stateProvider
+				.state('home', {
+					url: '/',
+					templateUrl: '../templates/home.html',
+					controller: 'MainCtrl as main'
+				})
 				.state('auth', {
 					url: '/auth',
-					templateUrl: '../templates/authView.html',
+					templateUrl: '../templates/login.html',
 					controller: 'AuthController as auth'
-				})
-				.state('users', {
-					url: '/users',
-					templateUrl: '../templates/userView.html',
-					controller: 'AuthController as user'
 				});
 		});
-})( angular.module('authApp', ['ui.router', 'satellizer']) );
+})( angular.module('titanium', ['ui.router', 'satellizer']) );
