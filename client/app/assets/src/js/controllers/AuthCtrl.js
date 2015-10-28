@@ -39,11 +39,14 @@
 				vm.loginErrorText = error.data.error;
 			})
 			.then(function(response) {
-				var user = JSON.stringify(response.data.user);
-				localStorage.setItem('user', user);
-				$rootScope.authenticated = true;
-				$rootScope.currentUser = response.data.user;
-				$state.go('home');
+				if(response) {
+						var data = response.data;
+						var user = JSON.stringify(response.data.user);
+						localStorage.setItem('user', user);
+						$rootScope.authenticated = true;
+						$rootScope.currentUser = response.data.user;
+						$state.go('home');
+				}
 			});
 		};
 
@@ -70,7 +73,6 @@
 				localStorage.removeItem('user');
 			}
 		};
-
 	};
 
 })(angular.module('titanium'));
