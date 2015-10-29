@@ -1,7 +1,3 @@
-function doClick(e) {
-    alert($.label.text);
-};
-
 $.home.on('getProducts', function(e) {
     $.scrollableView.scrollToView(1);
 });

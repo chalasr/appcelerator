@@ -1,5 +1,4 @@
 <Alloy>
 	<View class="container">
-		<Label id="myLabel">Here Contact page</Label>
 	</View>
 </Alloy>

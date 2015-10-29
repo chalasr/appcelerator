@@ -30,13 +30,17 @@ overrode the settings with other TSS, XML, or JS settings:
 	layout: "vertical"
 }
 
+"Window": {
+	backgroundColor:"#eee",
+}
+
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	color: "#000"
 }
 
-"#label": {
+"Label": {
 	font: {
 		fontSize: 12
 	}
@@ -44,6 +48,10 @@ overrode the settings with other TSS, XML, or JS settings:
 
 "WebView": {
 	height: 550,
+	top: 10,
+	scrollType: "vertical",
+	scrollable: true,
+	backgroundColor:"#eee",
 }
 
 "#scrollableView": {
@@ -63,4 +71,8 @@ overrode the settings with other TSS, XML, or JS settings:
 ".contact-link": {
 	top: -30,
 	left: 240
+}
+
+".title": {
+	top: -10
 }

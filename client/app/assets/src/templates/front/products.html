@@ -1,0 +1,8 @@
+<div class="well" ng-init="main.getProducts()">
+  <ul class="list-group" ng-if="main.products">
+    <li class="list-group-item" ng-repeat="product in main.products">
+      <h4>{{ product.name }}</h4>
+      <h5>{{ product.prix }}</h5>
+    </li>
+  </ul>
+</div>

@@ -1,5 +1,5 @@
 <Alloy>
 	<View class="container">
-		<Label id="myLabel">Here products page</Label>
+		<WebView class="webview" url="src/templates/front.html"/>
 	</View>
 </Alloy>

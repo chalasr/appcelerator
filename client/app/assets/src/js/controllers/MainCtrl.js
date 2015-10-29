@@ -3,6 +3,7 @@
     function MainCtrl($http, $state, $auth, $rootScope) {
       var self = this;
       self.items = {};
+
       this.authCheck = function() {
         if (!$auth.isAuthenticated()) {
           $state.go("auth");
@@ -20,6 +21,17 @@
             localStorage.setItem("user", user);
         }
       };
+
+      this.getProducts = function() {
+        $http.get('http://localhost:8000/api/products')
+        .success(function(data) {
+            self.products = data;
+        })
+        .error(function(error) {
+            alert(JSON.stringify(error));
+        });
+      };
+
     };
 
     app.controller('MainCtrl', MainCtrl);

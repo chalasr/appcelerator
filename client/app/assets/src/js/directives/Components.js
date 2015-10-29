@@ -6,7 +6,6 @@
         replace: 'true',
         template:
         '<div class="form-group" ng-if="authenticated">' +
-    			'<button class="btn btn-primary" ng-click="user.getUsers()">Users</button>' +
     			'<button class="btn btn-danger" ng-click="user.logout()">Logout</button>' +
         '</div>',
         bindToController: true,

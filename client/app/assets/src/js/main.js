@@ -5,12 +5,12 @@
 			$stateProvider
 				.state('home', {
 					url: '/',
-					templateUrl: '../templates/home.html',
+					templateUrl: '../templates/admin/home.html',
 					controller: 'MainCtrl as main'
 				})
 				.state('auth', {
 					url: '/auth',
-					templateUrl: '../templates/login.html',
+					templateUrl: '../templates/admin/login.html',
 					controller: 'AuthController as auth'
 				});
 		});

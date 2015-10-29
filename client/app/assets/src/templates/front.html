@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="titanium">
+<html ng-app="front">
   <head>
     <meta charset="utf-8">
     <title>Root</title>
   </head>
-  <body ng-controller="MainCtrl as main" style="background-color: #eeeeee">
+  <body ng-controller="ProductsCtrl as main" style="background-color: #eeeeee">
     <link rel="stylesheet" href="../lib/bootstrap-ios7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../lib/bootstrap-ios7/css/bootstrap-theme.min.css">
     <div class="container">
-        <ui-view></ui-view>
+      <div class="col-sm-4 col-sm-offset-4">
+      	<div class="well">
+      		<h3>Products List</h3>
+              <ui-view></ui-view>
+      	</div>
+      </div>
     </div>
     <script src="http://cdn.chalasdev.fr/js/jquery.js"></script>
     <script src="../lib/bootstrap-ios7/js/bootstrap.min.js"></script>
@@ -16,11 +21,7 @@
     <script type="text/javascript" src="http://cdn.chalasdev.fr/js/angular-touch.min.js"></script>
     <script type="text/javascript" src="http://cdn.chalasdev.fr/js/angular-route.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-    <script src="https://cdn.jsdelivr.net/satellizer/0.12.5/satellizer.min.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/controllers/MainCtrl.js"></script>
-    <script type="text/javascript" src="../js/controllers/AuthCtrl.js"></script>
+    <script type="text/javascript" src="../js/front.js"></script>
     <script type="text/javascript" src="../js/controllers/ProductsCtrl.js"></script>
-    <script type="text/javascript" src="../js/directives/Components.js"></script>
   </body>
 </html>
