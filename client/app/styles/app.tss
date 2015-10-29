@@ -24,3 +24,43 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 */
+
+".container": {
+	backgroundColor:"#eee",
+	layout: "vertical"
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#label": {
+	font: {
+		fontSize: 12
+	}
+}
+
+"WebView": {
+	height: 550,
+}
+
+"#scrollableView": {
+	height: 550
+}
+
+".home-link": {
+	top: 30,
+	left: 100
+}
+
+".products-link": {
+	top: -30,
+	left: 160
+}
+
+".contact-link": {
+	top: -30,
+	left: 240
+}

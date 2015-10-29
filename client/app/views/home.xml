@@ -1,0 +1,5 @@
+<Alloy>
+  <View id="home">
+    <WebView class="webview" url="src/templates/main.html"/>
+  </View>
+</Alloy>
