@@ -1,5 +1,5 @@
 ".container": {
-	backgroundColor:"#eee"
+	backgroundColor:"white"
 }
 
 "Label": {
@@ -15,8 +15,8 @@
 }
 
 "WebView": {
-	height: 600,
-	top: 60
+	height: 300,
+	top: 200
 }
 
 "#button_1": {
