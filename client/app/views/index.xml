@@ -1,14 +1,14 @@
 <Alloy>
 	<Window>
-		<View class="btn-block container">
+		<View class="menu">
 			<Button class="home-link" title="Home" onClick="getHome"/>
 			<Button class="products-link" title="Products" onClick="getProducts"/>
-			<Button class="contact-link" title="Contact" onClick="getContact"/>
+			<Button class="admin-link" title="Admin" onClick="getAdmin"/>
 		</View>
 		<ScrollableView id="scrollableView" class="container" layout="vertical">
 			<Require src='home' id="home"/>
 			<Require src='products' id="products"/>
-			<Require src='contact' id="contact"/>
+			<Require src='admin' id="admin"/>
 		</ScrollableView>
 	</Window>
 </Alloy>

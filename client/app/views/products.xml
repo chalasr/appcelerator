@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container">
+	<View>
 		<WebView class="webview" url="src/templates/front.html"/>
 	</View>
 </Alloy>

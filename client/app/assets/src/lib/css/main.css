@@ -258,3 +258,8 @@ input:focus{
 .fullScreen {
     width: 95%!important;
 }
+
+.nav-tabs li {
+  margin: 0!important,
+  padding: 0!important,
+}

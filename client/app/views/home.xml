@@ -1,5 +1,23 @@
 <Alloy>
-  <View id="home">
-    <WebView class="webview" url="src/templates/main.html"/>
-  </View>
+	<View class="container">
+		<ImageView class="webview" image="src/lib/img/imac.png">
+			<TabbedBar id="homeTabs" platform="ios" backgroundColor="#369" top="13" height="15" width="295">
+					 <Labels>
+							 <Label>MAINTENANCE</Label>
+							 <Label>ACHAT</Label>
+							 <Label>VENTE</Label>
+							 <Label>E-COMMERCE</Label>
+			 		 	</Labels>
+			</TabbedBar>
+			<View layout="vertical" class="tab" id="view1" visible="true">
+					<Label>ENTRETIEN</Label>
+					<Label>RÉPARATION</Label>
+					<Label>CONFIGURATION</Label>
+					<Label>ASSISTANCE</Label>
+			</View>
+			<View layout="vertical" class="tab" id="view2" visible="false"><Label>Achat</Label></View>
+			<View layout="vertical" class="tab" id="view3" visible="false"><Label>Vente</Label></View>
+			<View layout="vertical" class="tab" id="view4" visible="false"><Label>E-commerce</Label></View>
+		</ImageView>
+	</View>
 </Alloy>

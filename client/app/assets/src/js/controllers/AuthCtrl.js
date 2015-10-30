@@ -11,7 +11,7 @@
 		this.authCheck = function() {
 			if($auth.isAuthenticated()) {
 				$state.go('home');
-				$http.get('http://localhost:8000/api/authenticate/user')
+				$http.get('http://192.168.1.23:8000/api/authenticate/user')
 				.success(function(response) {
 					$rootScope.authenticated = true;
 					$rootScope.currentUser = response.user;
@@ -33,7 +33,7 @@
 			};
 			$auth.login(credentials)
 			.then(function() {
-				return $http.get('http://localhost:8000/api/authenticate/user');
+				return $http.get('http://192.168.1.23:8000/api/authenticate/user');
 			}, function(error) {
 				vm.loginError = true;
 				vm.loginErrorText = error.data.error;
@@ -51,7 +51,7 @@
 		};
 
 		vm.getUsers = function() {
-			$http.get('http://localhost:8000/api/authenticate')
+			$http.get('http://192.168.1.23:8000/api/authenticate')
 			.success(function(users) {
 				vm.users = users;
 			})

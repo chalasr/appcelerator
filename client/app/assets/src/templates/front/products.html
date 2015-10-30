@@ -1,8 +1,27 @@
+<style media="screen">
+  .price {
+      margin-left: 15px;
+  }
+  .nav-tabs li:hover {
+      cursor: pointer;
+  }
+</style>
+  <div class="form-group">
+    <input type="text" ng-model="query.name" class="form-control" placeholder="Search ...">
+  </div>
+  <ul class="nav nav-tabs">
+    <li ng-click="query.category_id = 1"><a>Macs</a></li>
+    <li ng-click="query.category_id = 2"><a>iPads</a></li>
+    <li ng-click="query.category_id = 4"><a>Accessories</a></li>
+  </ul>
 <div class="well" ng-init="main.getProducts()">
   <ul class="list-group" ng-if="main.products">
-    <li class="list-group-item" ng-repeat="product in main.products">
-      <h4>{{ product.name }}</h4>
-      <h5>{{ product.prix }}</h5>
+    <li class="list-group-item" ng-repeat="product in main.products | orderBy:'id':true | filter: query">
+      <span style="display: flex;">
+        <p class="text-left">{{ product.name }}</p>
+        <p class="price label label-default">{{ product.prix }}€</p>
+      </span>
+      <img style="margin-right: 10px!important;" class="img-rounded" width="50px" ng-src="http://lateliermac.com/uploads/{{ product.id }}/{{ product.photo1 }}" />
     </li>
   </ul>
 </div>

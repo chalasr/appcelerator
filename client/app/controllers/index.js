@@ -1,33 +1,33 @@
 $.home.on('getProducts', function(e) {
     $.scrollableView.scrollToView(1);
 });
-$.home.on('getContact', function(e) {
+$.home.on('getAdmin', function(e) {
     $.scrollableView.scrollToView(2);
 });
 $.products.on('getHome', function(e) {
     $.scrollableView.scrollToView(0);
 });
-$.products.on('getContact', function(e) {
+$.products.on('getAdmin', function(e) {
     $.scrollableView.scrollToView(2);
 });
-$.contact.on('getProducts', function(e) {
+$.admin.on('getProducts', function(e) {
     $.scrollableView.scrollToView(1);
 });
-$.contact.on('getHome', function(e) {
+$.admin.on('getHome', function(e) {
     $.scrollableView.scrollToView(0);
 });
 
 function getHome(e) {
     $.products.trigger('getHome', e);
-    $.contact.trigger('getHome', e);
+    $.admin.trigger('getHome', e);
 };
 function getProducts(e) {
     $.home.trigger('getProducts', e);
-    $.contact.trigger('getProducts', e);
+    $.admin.trigger('getProducts', e);
 };
-function getContact(e) {
-    $.home.trigger('getContact', e);
-    $.products.trigger('getContact', e);
+  function getAdmin(e) {
+    $.home.trigger('getAdmin', e);
+    $.products.trigger('getAdmin', e);
 };
 
 $.index.open();

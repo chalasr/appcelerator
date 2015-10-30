@@ -6,7 +6,7 @@
       $state.go('products');
       this.getProducts = function() {
         $state.go('products');
-        $http.get('http://localhost:8000/api/products')
+        $http.get('http://192.168.1.23:8000/api/products')
         .success(function(data) {
             self.products = data;
         })

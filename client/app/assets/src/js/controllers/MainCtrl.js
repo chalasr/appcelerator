@@ -9,7 +9,7 @@
           $state.go("auth");
           return;
         }
-        $http.get("http://localhost:8000/api/authenticate/user")
+        $http.get("http://192.168.1.23:8000/api/authenticate/user")
         .success(function(response) {
             $rootScope.authenticated = true;
             $rootScope.currentUser = response.user;
@@ -23,7 +23,7 @@
       };
 
       this.getProducts = function() {
-        $http.get('http://localhost:8000/api/products')
+        $http.get('http://192.168.1.23:8000/api/products')
         .success(function(data) {
             self.products = data;
         })

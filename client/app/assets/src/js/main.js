@@ -1,6 +1,6 @@
 (function(app) {
     app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
-			$authProvider.loginUrl = 'http://localhost:8000/api/authenticate';
+			$authProvider.loginUrl = 'http://192.168.1.23:8000/api/authenticate';
 			$urlRouterProvider.otherwise('/');
 			$stateProvider
 				.state('home', {

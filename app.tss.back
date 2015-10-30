@@ -26,7 +26,7 @@ overrode the settings with other TSS, XML, or JS settings:
 */
 
 ".container": {
-	top: 45,
+	top: 50,
 	backgroundColor:"#eee",
 	layout: "vertical"
 }
@@ -49,7 +49,7 @@ overrode the settings with other TSS, XML, or JS settings:
 
 "WebView": {
 	height: 550,
-	top: 45,
+	top: 10,
 	scrollType: "vertical",
 	scrollable: true,
 	backgroundColor:"#eee",
@@ -60,18 +60,15 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 ".home-link": {
-	top: 30,
-	left: 60
+	top: 100
 }
 
 ".products-link": {
-	top: 30,
-	left: 120
+	top: 100,
 }
 
 ".admin-link": {
-	top: 30,
-	left: 200
+	top: 100
 }
 
 ".title": {
@@ -85,28 +82,25 @@ overrode the settings with other TSS, XML, or JS settings:
 	top: -20
 }
 "#view1" : {
-	height: 100,
-	width: 250,
+	height: 150,
+	width: 100,
 	backgroundColor: "#eee"
 }
 "#view2" : {
-	height: 100,
-	width: 250,
+	height: 150,
+	width: 100,
 	backgroundColor: "#eee"
 }
 "#view3" : {
-	height: 100,
-	width: 250,
+	height: 150,
+	width: 100,
 	backgroundColor: "#eee"
 }
 "#view4" : {
-	height: 100,
-	width: 250,
+	height: 150,
+	width: 100,
 	backgroundColor: "#eee"
 }
 ".tab": {
 	top: 50
-}
-".menu": {
-		top: -10,
 }
